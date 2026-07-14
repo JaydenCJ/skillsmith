@@ -1,0 +1,14 @@
+# Offline-checkable test stub for changelog-draft (`skillsmith test`).
+skillsmith-tests: 1
+cases:
+  - name: explicit-range
+    prompt: Draft a changelog entry for everything between v1.2.0 and v1.3.0
+    args: "v1.2.0..v1.3.0"
+    expect:
+      files: [references/style.md]
+      output-contains: ["## [Unreleased]", "### "]
+  - name: since-last-tag
+    prompt: Update the changelog with whatever landed since the last release
+    args: ""
+    expect:
+      output-contains: ["## [Unreleased]"]

@@ -1,0 +1,55 @@
+{
+  "name": "skillsmith",
+  "version": "0.1.0",
+  "description": "Scaffolds and validates agent skills: front-matter schema, directory structure, argument placeholders, and test stubs. The authoring-side forge — write skills that load everywhere, before anyone else has to audit them. Zero runtime dependencies, fully offline.",
+  "author": "JaydenCJ",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "skillsmith": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "examples",
+    "docs/schema.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"tests/*.test.mjs\"",
+    "smoke": "bash scripts/smoke.sh"
+  },
+  "keywords": [
+    "agent-skills",
+    "skill",
+    "frontmatter",
+    "scaffold",
+    "validator",
+    "linter",
+    "claude-code",
+    "cli"
+  ],
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaydenCJ/skillsmith.git"
+  },
+  "homepage": "https://github.com/JaydenCJ/skillsmith#readme",
+  "bugs": {
+    "url": "https://github.com/JaydenCJ/skillsmith/issues"
+  }
+}
