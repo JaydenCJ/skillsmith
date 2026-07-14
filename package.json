@@ -2,7 +2,7 @@
   "name": "skillsmith",
   "version": "0.1.0",
   "description": "Scaffolds and validates agent skills: front-matter schema, directory structure, argument placeholders, and test stubs. The authoring-side forge — write skills that load everywhere, before anyone else has to audit them. Zero runtime dependencies, fully offline.",
-  "author": "JaydenCJ",
+  "author": "JaydenCJ <aisingioro.kiyon@gmail.com>",
   "license": "MIT",
   "type": "module",
   "bin": {
